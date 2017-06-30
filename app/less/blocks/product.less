@@ -1,0 +1,56 @@
+.product{
+  width: 23%;
+  height: 366px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  &__preview{
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+    // height: 100%;
+    // background: url("../img/ice-cream1.svg") no-repeat;
+    // background-size: contain;
+  }
+  &__image{
+    width: 100%;
+  }
+  &__popular{
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  &__price{
+    width: 160px;
+    font-size: 30px;
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    position: absolute;
+    top: 70%;
+  }
+  &__number{
+    font-size: 45px;
+    padding-right: 38px;
+  }
+  &__image-R{
+    position: absolute;
+    fill: white;
+    left: 83px;
+    top: 8px;
+  }
+  &__link{
+    color: @color;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+  }
+  &__info-link{
+    
+  }
+}
