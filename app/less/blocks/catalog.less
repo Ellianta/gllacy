@@ -1,0 +1,19 @@
+.catalog{
+  display: flex;
+  flex-direction: column;
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 320px;
+    @media(min-width: 950px){
+      height: 360px;
+    }
+    &:last-child{
+      height: 360px;
+      @media(min-width: 950px){
+        height: 410px;
+      }
+    }
+  }
+}

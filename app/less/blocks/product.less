@@ -1,17 +1,38 @@
 .product{
-  width: 23%;
-  height: 366px;
+  width: 25%;
+  padding: 0 10px;
+  margin: 0 -10px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   position: relative;
+  padding-top: 10px;
+  padding-bottom: 22px;
+  border-radius: 8px;
+  height: 320px;
+  flex-basis: auto;
+   @media(min-width: 950px){
+     height: 360px;
+   }
+  &:hover{
+    box-shadow: @shadow-modal;
+    background-color: rgba(255,255,255,0.4);
+    z-index: 3;
+    height: 360px;
+    @media(min-width: 950px){
+      height: 406px;
+    }
+  }
+  &:hover .product__link{
+    text-decoration: none;
+  }
+  &:hover .product__info-link{
+    display: block;
+  }
   &__preview{
     position: relative;
     width: 100%;
     margin-bottom: 10px;
-    // height: 100%;
-    // background: url("../img/ice-cream1.svg") no-repeat;
-    // background-size: contain;
   }
   &__image{
     width: 100%;
@@ -29,28 +50,45 @@
     justify-content: flex-start;
     align-items: baseline;
     position: absolute;
-    top: 70%;
+    top: 75%;
   }
   &__number{
     font-size: 45px;
-    padding-right: 38px;
+    padding-right: 33px;
   }
   &__image-R{
     position: absolute;
     fill: white;
-    left: 83px;
+    left: 78px;
     top: 8px;
   }
   &__link{
     color: @color;
     font-size: 16px;
     line-height: 22px;
+    min-height: 70px;
+    margin-bottom: 20px;
     text-align: center;
     font-weight: 500;
     display: block;
-    margin-bottom: 10px;
+    text-decoration-color: rgba(255,255,255,0.5);
+    @media(min-width: 950px){
+      min-height: 45px;
+    }
+    &:hover{
+      text-decoration: none;
+    }
   }
   &__info-link{
-    
+    font-size: 15px;
+    line-height: 23px;
+    display: none;
+    text-decoration: none;
+    color: @color;
+    text-align: center;
+    padding: 6px 0;
+    border-radius: 17px;
+    .button-link();
+    margin-top: auto;
   }
 }

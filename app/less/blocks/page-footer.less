@@ -1,0 +1,75 @@
+.page-footer{
+  min-height: 80px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  &__social{
+    padding-top: 30px;
+    width: 188px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0;
+  }
+  &__social-link{
+    position: relative;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    display: flex;
+    background: url("../img/icons/outline.svg") no-repeat 50%;
+     &:hover .page-footer__image{
+      opacity: 0.5;
+     }
+     &:focus .page-footer__image{
+      opacity: 1;
+     }
+  }
+  &__image{
+    fill: white;
+    margin-bottom: 3px;
+    margin: auto;
+  }
+  &__documentation{
+    width: 340px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+    padding-top: 17px;
+    padding-left: 20px;
+  }
+  &__link{
+    width: 170px;
+    display: block;
+    color: @color;
+    font-size: 13px;
+    margin-bottom: 7px;
+    text-decoration-color: rgba(255,255,255,0.4);
+    &--short{
+      width: 140px;
+    }
+    &--academy{
+      display: inline;
+      font-size: 12px;
+    }
+  }
+  &__heart-image{
+    fill: white;
+    position: absolute;
+    left: 0;
+  }
+  &__copyright{
+    width: 190px;
+    &--inner{
+      padding-top: 20px;
+    }
+  }
+  &__text{
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+  }
+}

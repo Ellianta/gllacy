@@ -35,9 +35,16 @@
       background-color: @bg-modal;
       text-decoration: none;
     }
+    &:focus{
+      box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 1.0);
+    }
+    &--active{
+      background-color: @bg-active-link;
+    }
   }
   &__sub{
     position: absolute;
+    z-index: 2;
     .modal();
     width: 143px;
     height: 171px;

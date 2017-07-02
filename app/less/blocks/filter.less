@@ -1,0 +1,244 @@
+.filter{
+  width: 100%;
+  height: 135px;
+  margin-bottom: 30px;
+  &__form{
+  width: 860px;
+  height: 135px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+  & fieldset{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+  }
+  &__title{
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 15px;
+  }
+  // ---поле сортировки--
+  &__sort{
+    height: 60px;
+    width: 194px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__select{
+    width: 194px;
+    height: 36px;
+    border: none;
+    outline: none;
+    border-radius: 18px;
+    font-size: 16px;
+    background-color: @bg-hover;
+    text-transform: lowercase;
+    color: white;
+    padding: 0 15px;
+    margin-top: 7px;
+    &:hover{
+      background-color: white;
+      color: black;
+    }
+    & option{
+      color: black;
+    }
+  }
+  // поле выбора цены
+  &__price{
+    width: 217px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__price-select{
+    width: 185px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 14px;
+    padding-bottom: 5px;
+  }
+  &__price-min,
+  &__price-max{
+    width: 30px;
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 14px;
+  }
+  &__price-scale{
+    width: 217px;
+    height: 36px;
+    background-color: @bg-hover;
+    border-radius: 18px;
+    position: relative;
+  }
+  &__price-bar{
+    width: 186px;
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    margin-top: -2.5px;
+    left: 50%;
+    margin-left: -93px;
+    background-color: rgba(255,255,255,0.3);
+    &--active{
+      min-width: 10px;
+      max-width: 186px;
+      width: 100px;
+      background-color: @color;
+      left: 140px;
+    }
+  }
+  &__price-toggle{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    margin-top: -12px;
+    cursor: pointer;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+    &--min{
+      left: 40px;
+    }
+    &--max{
+      left: 140px;
+    }
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+
+  // поле выбора жирности
+  &__richness{
+    width: 420px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__radio-field{
+    height: 36px;
+    width: 100%;
+    padding: 0 10px;
+    font-size: 16px;
+    background-color: @bg-hover;
+    border-radius: 18px;
+    margin-top: 7px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__richness-select{
+    display: none;
+    &:checked + .filter__radio::after{
+      display: block;
+    }
+  }
+  &__radio{
+    padding-left: 30px;
+    position: relative;
+    &::before{
+      content: "";
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid white;
+      left: 2px;
+      top: -1px;;
+    }
+    &::after{
+      content: "";
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      border-radius: 50%;
+      background-color: white;
+      top: 4px;
+      left: 7px;
+      display: none;
+    }
+  }
+  // Стили для наполнителей
+  &__filler{
+    width: 700px;
+    height: 60px;
+  }
+  &__check-field{
+    height: 36px;
+    width: 100%;
+    padding: 0 5px;
+    font-size: 16px;
+    background-color: @bg-hover;
+    border-radius: 18px;
+    text-transform: lowercase;
+    margin-top: 7px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__filler-select{
+    display: none;
+    &:checked + .filter__check::after{
+      display: block;
+    }
+    }
+  &__check{
+    padding-left: 34px;
+    position: relative;
+    &::before{
+      content: "";
+      width: 18px;
+      height: 18px;
+      border: 1px solid white;
+      position: absolute;
+      border-radius: 3px;
+      top: -1px;
+      left: 0;
+    }
+    &::after{
+      content: "";
+      width: 20px;
+      height: 20px;
+      background: url("../img/icons/check.svg");
+      position: absolute;
+      top: -1px;
+      left: 0;
+      display: none;
+    }
+  }
+  // кнопка
+  &__button{
+    width: 145px;
+    height: 37px;
+    border-radius: 18px;
+    border: 2px solid white;
+    color: @color;
+    outline: none;
+    background: @bg-hover;
+    font-size: 16px;
+    font-weight: 500;
+    &:hover{
+      background-color: white;
+      color: black;
+    }
+    &:active{
+      box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 1.0);
+      border: none;
+    }
+  }
+
+
+}

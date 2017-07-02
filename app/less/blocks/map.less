@@ -1,0 +1,54 @@
+.map{
+  height: 430px;
+  margin: 0 -2.5%;
+  margin-bottom: 20px;
+  background: white url("../img/map.png") no-repeat 50%;
+  color: #343434;
+  position: relative;
+  &__contacts{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    margin-top: -150px;
+    right: 25px;
+    background-color: white;
+    padding: 25px;
+    padding-top: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+  &__adress{
+    margin-bottom: 17px;
+  }
+  &__phone{
+    line-height: 24px;
+  }
+  &__bold{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+  &__button{
+    .button-link();
+    height: 44px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    padding: 11px 0;
+    border-radius: 22px;
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 700;
+    color: @color;
+    margin-top: auto;
+    margin-left: auto;
+    cursor: pointer;
+  }
+}

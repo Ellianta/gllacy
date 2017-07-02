@@ -1,11 +1,10 @@
 .user-block{
-  width: 265px;
+  width: 260px;
   margin-left: auto;
   padding-top: 23px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-
   & label,
   & input{
     // display: none;
@@ -23,10 +22,10 @@
     position: relative;
      &:hover{
        background-color: white;
-       color: black;
+       color: #373737;
      }
      &:hover .user-block__image{
-       fill: black;
+       fill: #373737;
      }
      &--search{
        width: 33px;
@@ -46,17 +45,22 @@
        padding: 8px 0;
        padding-left: 15px;
        justify-content: flex-start;
-       &:hover{
-        background-color: rgba(255,255,255,0.3);
-        color: white;
-       }
-       &:hover .user-block__image{
-         fill: white;
-       }
+      &-full{
+        background: white;
+        color: #373737;
+        & .user-block__image{
+          fill: #373737;
+          background: url("../img/icons/full.svg") no-repeat 4px 4px;
+        }
+        &:hover .user-block__basket-full{
+          display: flex;
+        }
+      }
      }
   }
   &__image{
     fill: white;
+    fill-rule: evenodd;
     margin-right: 7px;
     &--search{
       margin: auto;
@@ -72,6 +76,15 @@
     top: 38px;
     left: -239px;
     display: none;
+    z-index: 2;
+    &::before{
+      content: "";
+      width: 272px;
+      height: 50px;
+      position: absolute;
+      top: -50px;
+      left: 0;
+    }
   }
   &__search-field{
     outline: none;
@@ -88,6 +101,7 @@
   }
   // ----------------ОКНО ЛОГИНА------------
   &__login-form{
+    z-index: 2;
     width: 272px;
     height: 175px;
     position: absolute;
@@ -99,6 +113,14 @@
     justify-content: flex-start;
     flex-wrap: wrap;
     align-items: flex-start;
+    &::before{
+      content: "";
+      width: 272px;
+      height: 10px;
+      position: absolute;
+      top: -10px;
+      left: 0;
+    }
   }
   &__mail-field,
   &__pass-field{
@@ -129,6 +151,14 @@
     font-family: inherit;
     font-size: 15px;
     font-weight: 700;
+    &--basket{
+      display: block;
+      text-decoration: none;
+      min-width: 160px;
+      padding: 10px 20px;
+      margin-left: auto;
+      margin-top: auto;
+      }
   }
   &__links{
     width: 120px;
@@ -140,7 +170,7 @@
     font-size: 13px;
     line-height: 20px;
     font-weight: 400;
-    color: black;
+    color: #373737;
     text-decoration-color: rgba(0,0,0,0.5);
   }
   // -------ОКНО ДЛЯ КОРЗИНЫ С ТОВАРАМИ-----------
@@ -151,6 +181,17 @@
     .modal();
     top: 38px;
     left: -420px;
+    z-index: 2;
+    padding: 20px 15px;
+    flex-wrap: wrap;
     display: none;
+    &::before{
+      content: "";
+      width: 539px;
+      height: 10px;
+      position: absolute;
+      top: -10px;
+      left: 0;
+    }
   }
 }

@@ -1,0 +1,43 @@
+.page-nav{
+  height: 72px;
+  width: 100%;
+  padding-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  border-bottom: 1px solid @bg-hover;
+  &__link{
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 2px;
+    color: white;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 500;
+    text-decoration: none;
+    &--active{
+      background-color: white;
+      color: #333333;
+    }
+    &:hover{
+      background-color: @bg-hover;
+    }
+  }
+  &__prev-img,
+  &__next-img{
+    fill :white;
+    margin-top: 6px;
+    &--disabled{
+      opacity: .2;
+    }
+  }
+  &__next-img{
+    margin-left: 10px;
+  }
+  &__prev-img{
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,42 @@
+.info-block{
+  width: 100%;
+  min-height: 305px;
+  padding: 25px 20px 0;
+  margin-bottom: 40px;
+  border-radius: 15px;
+  background: #f0e4cc url("../img/wafer.jpg");
+  color: @info-color;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  &__title{
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  &__content{
+    width: 48.7%;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+    padding-left: 55px;
+    position: relative;
+    &--right{
+      margin-left: auto;
+    }
+  }
+  &__image{
+    position: absolute;
+    fill: @info-color;
+    fill-rule:evenodd;
+    top: -13px;
+    left: 0;
+  }
+}
